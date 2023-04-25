@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
-import { type NextPage } from "next";
+import { useEffect, useState, type MouseEvent } from "react";
 import { Simulation } from "simulationjs";
+import { createTriangleDemo } from "~/utils/triangle-demo";
+import { type NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { createTriangleDemo } from "~/utils/triangle-demo";
+import Link from "next/link";
 import styles from "./index.module.css";
 import projectData from "../data/projects.json";
 
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
   const [projects, setProjects] = useState<UiProjectType[]>([]);
 
   useEffect(() => {
+    console.log("init");
     setProjects(
       projectData.projects.map(
         (p) =>
@@ -32,14 +34,26 @@ const Home: NextPage = () => {
 
     const canvas = new Simulation("canvas");
 
-    createTriangleDemo(canvas);
+    const end = createTriangleDemo(canvas);
 
     return () => {
+      end();
       canvas.end();
     };
   }, []);
 
-  const showDetails = (index: number) => index;
+  const showDetails = (e: MouseEvent<HTMLButtonElement>, index: number) => {
+    e.stopPropagation();
+    setProjects((prev) =>
+      prev.map((proj, i) => {
+        if (i === index) {
+          console.log(i, index, "toggling");
+          proj.showingDetails = !proj.showingDetails;
+        }
+        return proj;
+      })
+    );
+  };
 
   return (
     <>
@@ -68,38 +82,43 @@ const Home: NextPage = () => {
               const aspectRatio = 984 / 1582;
               const width = 300;
               return (
-                <a
+                <div
                   key={`proj-${index}`}
-                  className="flex flex-col overflow-hidden rounded-md shadow-md"
-                  href={p.link}
+                  className="flex flex-col overflow-hidden rounded-md shadow-md duration-200 ease-in-out hover:translate-y-[-4px] hover:scale-105"
                 >
-                  <Image
-                    src={`/assets/${p.filename}`}
-                    alt=""
-                    width={width}
-                    height={width * aspectRatio}
-                  />
+                  <Link href={p.link}>
+                    {/* make an overlay with a open icon thing */}
+                    <Image
+                      src={`/assets/${p.filename}`}
+                      alt=""
+                      width={width}
+                      height={width * aspectRatio}
+                    />
+                  </Link>
                   <div className="flex justify-between p-3">
                     <h3>{p.name}</h3>
                     <button
                       className="underline"
-                      onClick={() => showDetails(index)}
+                      onClick={(e) => showDetails(e, index)}
                     >
                       Details
                     </button>
                   </div>
-                </a>
+                  <div>{p.showingDetails && <span>{p.description}</span>}</div>
+                </div>
               );
             })}
           </article>
         </section>
-        <section className={`flex justify-center ${styles["fade-in"] || ""}`}>
+        <section
+          className={`flex flex-col items-center ${styles["fade-in"] || ""}`}
+        >
           <h1 className="text-3xl font-light">Experience</h1>
           <ul>
             <li>TypeScript/JavaScript</li>
-            <li>Golang</li>
             <li>React</li>
             <li>NextJs</li>
+            <li>Golang</li>
             <li>Java</li>
             <li>Rust</li>
           </ul>

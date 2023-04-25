@@ -9,21 +9,19 @@ import {
   clamp,
   degToRad,
   frameLoop,
-  Line,
   Polygon,
   transitionValues,
 } from "simulationjs";
 import triangulate from "delaunay-triangulate";
 
 export const createTriangleDemo = (canvas: Simulation) => {
+  let running = true;
+
   canvas.setBgColor(new Color(255, 255, 255));
   canvas.fitElement();
 
   const triangles = new SceneCollection("triangles");
   canvas.add(triangles);
-
-  const lines = new SceneCollection("test");
-  canvas.add(lines);
 
   const outerBuffer = 80;
   // const outerBuffer = 0;
@@ -89,9 +87,6 @@ export const createTriangleDemo = (canvas: Simulation) => {
     }
   }
 
-  const drawLines = false;
-  // const drawLines = true;
-
   const numCircles = 200;
   const points = generatePoints(numCircles);
   const dots = generateCircles(points);
@@ -110,7 +105,6 @@ export const createTriangleDemo = (canvas: Simulation) => {
       fromColorEnd.g - fromColor.g,
       fromColorEnd.b - fromColor.b
     );
-    console.log(diff);
     void transitionValues(
       // eslint-disable-next-line @typescript-eslint/no-empty-function
       () => {},
@@ -130,14 +124,23 @@ export const createTriangleDemo = (canvas: Simulation) => {
     );
   })();
 
+  let startPos: Vector | null = null;
   let pos: Vector | null = null;
-  window.addEventListener("mousedown", (e) => {
+  canvas.on("mousedown", (e: MouseEvent) => {
     pos = new Vector(e.offsetX, e.offsetY).multiply(canvas.ratio);
+    startPos = pos.clone();
   });
-  window.addEventListener("mouseup", () => {
+  canvas.on("mouseup", (e: MouseEvent) => {
+    if (pos !== null && startPos !== null) {
+      const diff = pos.clone().sub(startPos);
+      if (diff.getMag() === 0) {
+        addNewPoint(new Vector(e.offsetX, e.offsetY).multiply(canvas.ratio));
+      }
+    }
+    startPos = null;
     pos = null;
   });
-  window.addEventListener("mousemove", (e) => {
+  canvas.on("mousemove", (e: MouseEvent) => {
     if (pos) {
       pos = new Vector(e.offsetX, e.offsetY).multiply(canvas.ratio);
     }
@@ -147,10 +150,20 @@ export const createTriangleDemo = (canvas: Simulation) => {
     movePoints(dots, pos, clamp(p, 0.01, 50));
     drawTriangles(dots);
     drawPoints(dots);
+    if (!running) return false;
   })();
 
+  function addNewPoint(pos: Vector) {
+    dots.push(
+      new Node(
+        pos,
+        randInt(3.25, 1.75) * canvas.ratio,
+        new Color(255, 255, 255, 0.4)
+      )
+    );
+  }
+
   function drawTriangles(circles: Node[]) {
-    lines.empty();
     triangles.empty();
 
     const corners = [
@@ -167,27 +180,6 @@ export const createTriangleDemo = (canvas: Simulation) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     const triangulated = triangulate(posArr) as [number, number, number][];
     triangulated.forEach((triangle) => {
-      if (drawLines) {
-        const line1 = new Line(
-          dots[triangle[0]]?.pos || new Vector(0, 0),
-          dots[triangle[1]]?.pos || new Vector(0, 0),
-          new Color(0, 0, 0)
-        );
-        const line2 = new Line(
-          dots[triangle[1]]?.pos || new Vector(0, 0),
-          dots[triangle[2]]?.pos || new Vector(0, 0),
-          new Color(0, 0, 0)
-        );
-        const line3 = new Line(
-          dots[triangle[2]]?.pos || new Vector(0, 0),
-          dots[triangle[0]]?.pos || new Vector(0, 0),
-          new Color(0, 0, 0)
-        );
-        lines.add(line1);
-        lines.add(line2);
-        lines.add(line3);
-      }
-
       const change = new Color(
         toColor.r - fromColor.r,
         toColor.g - fromColor.g,
@@ -239,7 +231,6 @@ export const createTriangleDemo = (canvas: Simulation) => {
           randInt(canvas.height + 2 * outerBuffer, -outerBuffer) * canvas.ratio
         )
       );
-      // res.push(new Vector(canvas.width, canvas.height));
     }
     return res;
   }
@@ -250,7 +241,7 @@ export const createTriangleDemo = (canvas: Simulation) => {
         new Node(
           p,
           randInt(3.25, 1.75) * canvas.ratio,
-          drawLines ? new Color(0, 0, 0) : new Color(255, 255, 255, 0.4)
+          new Color(255, 255, 255, 0.4)
         )
     );
   }
@@ -261,4 +252,10 @@ export const createTriangleDemo = (canvas: Simulation) => {
       p.draw(canvas.ctx);
     });
   }
+
+  return () => {
+    canvas.empty();
+    triangles.empty();
+    running = false;
+  };
 };
