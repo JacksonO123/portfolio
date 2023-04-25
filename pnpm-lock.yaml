@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  delaunay-triangulate:
+    specifier: ^1.1.6
+    version: 1.1.6
   next:
     specifier: ^13.2.4
     version: 13.2.4(react-dom@18.2.0)(react@18.2.0)
@@ -10,6 +13,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  simulationjs:
+    specifier: ^3.7.8
+    version: 3.7.8
   zod:
     specifier: ^3.21.4
     version: 3.21.4
@@ -673,6 +679,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /bit-twiddle@1.0.2:
+    resolution: {integrity: sha512-B9UhK0DKFZhoTFcfvAzhqsjStvGJp9vYWf3+6SNTtdSQnvIgfkHbgHrg/e4+TH71N2GDu8tpmCVoyfrL1d7ntA==}
+    dev: false
+
   /brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
     dependencies:
@@ -849,6 +859,13 @@ packages:
       has-property-descriptors: 1.0.0
       object-keys: 1.1.1
     dev: true
+
+  /delaunay-triangulate@1.1.6:
+    resolution: {integrity: sha512-mhAclqFCgLoiBIDQDIz2K+puZq6OhYxunXrG2wtTcZS+S1xuzl+H3h0MIOajpES+Z+jfY/rz0wVt3o5iipt1wg==}
+    dependencies:
+      incremental-convex-hull: 1.0.1
+      uniq: 1.0.1
+    dev: false
 
   /didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
@@ -1556,6 +1573,13 @@ packages:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
     engines: {node: '>=0.8.19'}
     dev: true
+
+  /incremental-convex-hull@1.0.1:
+    resolution: {integrity: sha512-mKRJDXtzo1R9LxCuB1TdwZXHaPaIEldoGPsXy2jrJc/kufyqp8y/VAQQxThSxM2aroLoh6uObexPk1ASJ7FB7Q==}
+    dependencies:
+      robust-orientation: 1.2.1
+      simplicial-complex: 1.0.0
+    dev: false
 
   /inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
@@ -2367,6 +2391,30 @@ packages:
       glob: 7.2.3
     dev: true
 
+  /robust-orientation@1.2.1:
+    resolution: {integrity: sha512-FuTptgKwY6iNuU15nrIJDLjXzCChWB+T4AvksRtwPS/WZ3HuP1CElCm1t+OBfgQKfWbtZIawip+61k7+buRKAg==}
+    dependencies:
+      robust-scale: 1.0.2
+      robust-subtract: 1.0.0
+      robust-sum: 1.0.0
+      two-product: 1.0.2
+    dev: false
+
+  /robust-scale@1.0.2:
+    resolution: {integrity: sha512-jBR91a/vomMAzazwpsPTPeuTPPmWBacwA+WYGNKcRGSh6xweuQ2ZbjRZ4v792/bZOhRKXRiQH0F48AvuajY0tQ==}
+    dependencies:
+      two-product: 1.0.2
+      two-sum: 1.0.0
+    dev: false
+
+  /robust-subtract@1.0.0:
+    resolution: {integrity: sha512-xhKUno+Rl+trmxAIVwjQMiVdpF5llxytozXJOdoT4eTIqmqsndQqFb1A0oiW3sZGlhMRhOi6pAD4MF1YYW6o/A==}
+    dev: false
+
+  /robust-sum@1.0.0:
+    resolution: {integrity: sha512-AvLExwpaqUqD1uwLU6MwzzfRdaI6VEZsyvQ3IAQ0ZJ08v1H+DTyqskrf2ZJyh0BDduFVLN7H04Zmc+qTiahhAw==}
+    dev: false
+
   /run-parallel@1.2.0:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
@@ -2419,6 +2467,17 @@ packages:
       get-intrinsic: 1.2.0
       object-inspect: 1.12.3
     dev: true
+
+  /simplicial-complex@1.0.0:
+    resolution: {integrity: sha512-mHauIKSOy3GquM5VnYEiu7eP5y4A8BiaN9ezUUgyYFz1k68PqDYcyaH3kenp2cyvWZE96QKE3nrxYw65Allqiw==}
+    dependencies:
+      bit-twiddle: 1.0.2
+      union-find: 1.0.2
+    dev: false
+
+  /simulationjs@3.7.8:
+    resolution: {integrity: sha512-DQzRVIOcpTm94IIcq6MkYbDBavCZMoGB4HPsfLC8kGsmm52SgvquuAz1t3kHwI+VMBfRa7O/48XKRGijfNc5Qg==}
+    dev: false
 
   /slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
@@ -2648,6 +2707,14 @@ packages:
       typescript: 5.0.2
     dev: true
 
+  /two-product@1.0.2:
+    resolution: {integrity: sha512-vOyrqmeYvzjToVM08iU52OFocWT6eB/I5LUWYnxeAPGXAhAxXYU/Yr/R2uY5/5n4bvJQL9AQulIuxpIsMoT8XQ==}
+    dev: false
+
+  /two-sum@1.0.0:
+    resolution: {integrity: sha512-phP48e8AawgsNUjEY2WvoIWqdie8PoiDZGxTDv70LDr01uX5wLEQbOgSP7Z/B6+SW5oLtbe8qaYX2fKJs3CGTw==}
+    dev: false
+
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -2682,6 +2749,14 @@ packages:
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
     dev: true
+
+  /union-find@1.0.2:
+    resolution: {integrity: sha512-wFA9bMD/40k7ZcpKVXfu6X1qD3ri5ryO8HUsuA1RnxPCQl66Mu6DgkxyR+XNnd+osD0aLENixcJVFj+uf+O4gw==}
+    dev: false
+
+  /uniq@1.0.1:
+    resolution: {integrity: sha512-Gw+zz50YNKPDKXs+9d+aKAjVwpjNwqzvNpLigIruT4HA9lMZNdMqs9x07kKHB/L9WRzqp4+DlTU5s4wG2esdoA==}
+    dev: false
 
   /update-browserslist-db@1.0.11(browserslist@4.21.5):
     resolution: {integrity: sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==}

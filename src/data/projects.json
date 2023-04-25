@@ -1,0 +1,46 @@
+{
+  "projects": [
+    {
+      "name": "Delaunay Triangulation",
+      "description": "Visualization of delaunay triangulation.",
+      "tools": ["SimulationJS", "TypeScript", "Vercel"],
+      "link": "https://triangulation.vercel.app/",
+      "filename": "triangulation.jpg"
+    },
+    {
+      "name": "Cross Section",
+      "description": "3d graphing calculator for visualizing cross section of two functions. Visualizes the rotation of the cross section around an axis of rotation.",
+      "tools": ["SolidJS", "TypeScript", "SimulationJS", "Vercel"],
+      "link": "https://cross-section.vercel.app/",
+      "filename": "cross-section.jpg"
+    },
+    {
+      "name": "Ray Marching",
+      "description": "Visualization of a 2d ray marching algorithm.",
+      "tools": ["SimulationJS", "TypeScript", "Vercel"],
+      "link": "https://2d-ray-marching-visualization.vercel.app/",
+      "filename": "raymarch.jpg"
+    },
+    {
+      "name": "Blisp",
+      "description": "A lisp inspired programming language built from scratch.",
+      "tools": ["Golang"],
+      "link": "https://github.com/JacksonO123/blisp",
+      "filename": "blisp.jpg"
+    },
+    {
+      "name": "SimulationJS",
+      "description": "A canvas based graphics library built from scratch that can render 2d and 3d objects.",
+      "tools": ["TypeScript"],
+      "link": "https://github.com/Simulation-JS/Simulation-JS",
+      "filename": "simulationjs.jpg"
+    },
+    {
+      "name": "LampJS",
+      "description": "A lightweight JavaScript framework, using a variation of a signals implementation.",
+      "tools": ["TypeScript", "Vite"],
+      "link": "https://lampjs.vercel.app",
+      "filename": "lampjs.jpg"
+    }
+  ]
+}
