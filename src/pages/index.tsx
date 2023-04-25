@@ -117,7 +117,7 @@ const Home: NextPage = () => {
         <section
           className={`flex flex-col items-center ${styles["fade-in"] || ""}`}
         >
-          <h1 className="text-3xl font-light">Experience</h1>
+          <h1 className="text-3xl font-light">Experience (in development)</h1>
           <ul>
             <li>TypeScript/JavaScript</li>
             <li>React</li>
