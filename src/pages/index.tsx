@@ -70,7 +70,7 @@ const Home: NextPage = () => {
               return (
                 <a
                   key={`proj-${index}`}
-                  className="flex flex-col rounded-md shadow-md"
+                  className="flex flex-col overflow-hidden rounded-md shadow-md"
                   href={p.link}
                 >
                   <Image
