@@ -117,17 +117,28 @@ const Home: NextPage = () => {
         <section
           className={`flex flex-col items-center ${styles["fade-in"] || ""}`}
         >
-          <h1 className="text-3xl font-light">Experience (in development)</h1>
-          <ul>
-            <li>TypeScript/JavaScript</li>
-            <li>React</li>
-            <li>NextJs</li>
-            <li>Golang</li>
-            <li>Java</li>
-            <li>Rust</li>
-          </ul>
+          <div>
+            <h1 className="mb-4 text-3xl font-light">Experience</h1>
+            <ul className="ml-4 list-disc">
+              <li>TypeScript/JavaScript</li>
+              <li>React</li>
+              <li>NextJs</li>
+              <li>Golang</li>
+              <li>Java</li>
+              <li>Rust</li>
+            </ul>
+          </div>
         </section>
       </main>
+      <footer className="mt-8 w-full bg-gray-200 p-4">
+        <Link
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=jacksonotto120@gmail.com"
+          className="text-gray-600 underline"
+          target="_blank"
+        >
+          Contact me
+        </Link>
+      </footer>
     </>
   );
 };

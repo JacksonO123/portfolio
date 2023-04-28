@@ -253,9 +253,11 @@ export const createTriangleDemo = (canvas: Simulation) => {
     });
   }
 
-  return () => {
+  function endCanvas() {
     canvas.empty();
     triangles.empty();
     running = false;
-  };
+  }
+
+  return endCanvas;
 };
