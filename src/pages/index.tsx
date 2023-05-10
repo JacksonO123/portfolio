@@ -3,21 +3,11 @@ import { Simulation } from "simulationjs";
 import { createTriangleDemo } from "~/utils/triangle-demo";
 import { type NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
 import projectData from "../data/projects.json";
-import ExternalLink from "~/icons/external-link";
-import Dropdown from "~/components/Dropdown";
-
-type UiProjectType = {
-  name: string;
-  description: string;
-  tools: string[];
-  link: string;
-  filename: string;
-  showingDetails: boolean;
-};
+import Projects from "~/components/Projects";
+import { type UiProjectType } from "~/types/projects";
 
 const Home: NextPage = () => {
   const [projects, setProjects] = useState<UiProjectType[]>([]);
@@ -77,41 +67,7 @@ const Home: NextPage = () => {
         >
           <h1 className="mb-5 text-3xl font-light">Projects</h1>
           <article className={`w-full ${styles["project-grid"] || ""}`}>
-            {projects.map((p, index) => {
-              // all images are the same size
-              const aspectRatio = 984 / 1582;
-              const width = 300;
-              return (
-                <div
-                  key={`proj-${index}`}
-                  className="flex h-fit w-[286px] flex-col overflow-hidden rounded-md shadow-md duration-200 ease-in-out hover:translate-y-[-4px] hover:scale-105"
-                >
-                  <Link href={p.link} className="relative" target="_blank">
-                    <div className="absolute left-0 top-0 flex h-full w-full items-center justify-center bg-black bg-opacity-0 text-white opacity-0 duration-150 hover:bg-opacity-50 hover:opacity-100">
-                      <ExternalLink />
-                    </div>
-                    <Image
-                      src={`/assets/${p.filename}`}
-                      alt=""
-                      width={width}
-                      height={width * aspectRatio}
-                    />
-                  </Link>
-                  <div className="flex justify-between p-3">
-                    <h3>{p.name}</h3>
-                    <button
-                      className="underline"
-                      onClick={(e) => showDetails(e, index)}
-                    >
-                      Details
-                    </button>
-                  </div>
-                  <Dropdown open={p.showingDetails} className="p-3">
-                    {p.description}
-                  </Dropdown>
-                </div>
-              );
-            })}
+            <Projects projects={projects} showDetails={showDetails} />
           </article>
         </section>
         <section

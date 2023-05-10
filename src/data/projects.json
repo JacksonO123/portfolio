@@ -41,6 +41,26 @@
       "tools": ["TypeScript", "Vite"],
       "link": "https://lampjs.vercel.app",
       "filename": "lampjs.jpg"
+    },
+    {
+      "name": "3d TicTacToe",
+      "description": "TicTacToe in 3d using web components.",
+      "tools": ["TypeScript", "Vite", "Netlify", "NodeJS"],
+      "link": "https://the3dtictactoe.netlify.app/",
+      "filename": "tictactoe.jpg"
+    },
+    {
+      "name": "MVHS CS Club Website",
+      "description": "Website for the computer science club at MVHS.",
+      "tools": ["TypeScript", "React", "Netlify", "NodeJs"],
+      "link": "https://mvhs-cs-club.netlify.app/",
+      "filename": "mvcs.jpg"
+    },
+    {
+      "name": "Seating Chart Generator",
+      "description": "Seating chart generator built to simplify the process of generating and interacting with a seating chart. (In development)",
+      "tools": ["TypeScript", "React", "Vercel", "Vite", "Golang"],
+      "filename": "seatingchart.jpg"
     }
   ]
 }
