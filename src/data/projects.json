@@ -8,6 +8,13 @@
       "filename": "triangulation.jpg"
     },
     {
+      "name": "Spring Physics Demo",
+      "description": "Demo of spring physics with the ability to simulation soft body physics",
+      "tools": ["SimulationJS", "LampJs", "TypeScript", "Vercel", "Vite"],
+      "link": "https://springs.vercel.app/",
+      "filename": "springs.jpg"
+    },
+    {
       "name": "Cross Section",
       "description": "3d graphing calculator for visualizing cross section of two functions. Visualizes the rotation of the cross section around an axis of rotation.",
       "tools": ["SolidJS", "TypeScript", "SimulationJS", "Vercel"],
