@@ -38,8 +38,8 @@ const Projects = ({ projects, showDetails }: ProjectsProps) => {
               <Image
                 src={`/assets/${p.filename}`}
                 alt=""
-                width={width}
-                height={width * aspectRatio}
+                width={300}
+                height={186}
               />
             )}
             <div className="flex justify-between p-3">

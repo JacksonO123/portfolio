@@ -29,6 +29,13 @@
       "filename": "raymarch.jpg"
     },
     {
+      "name": "Quiq",
+      "description": "A programming language built from scratch in rust.",
+      "tools": ["Rust"],
+      "link": "https://github.com/JacksonO123/quiq",
+      "filename": "quiq.jpg"
+    },
+    {
       "name": "Blisp",
       "description": "A lisp inspired programming language built from scratch.",
       "tools": ["Golang"],
