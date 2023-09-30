@@ -5,7 +5,7 @@ const Experience = () => {
   return (
     <div className="flex w-full flex-col items-center">
       <h1 className="mb-10 w-fit text-3xl font-light">Experience</h1>
-      <section className="flex flex-row justify-center gap-4">
+      <section className="flex max-w-[800px] flex-row flex-wrap justify-center gap-4">
         {experience.experience.map((item, index) => (
           <div
             key={`experience-${index}`}
