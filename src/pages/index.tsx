@@ -8,6 +8,7 @@ import styles from "./index.module.css";
 import projectData from "../data/projects.json";
 import Projects from "~/components/Projects";
 import { type UiProjectType } from "~/types/projects";
+import Experience from "~/components/Experience";
 
 const Home: NextPage = () => {
   const [projects, setProjects] = useState<UiProjectType[]>([]);
@@ -73,17 +74,7 @@ const Home: NextPage = () => {
         <section
           className={`flex flex-col items-center ${styles["fade-in"] || ""}`}
         >
-          <div>
-            <h1 className="mb-4 text-3xl font-light">Experience</h1>
-            <ul className="ml-4 list-disc">
-              <li>TypeScript/JavaScript</li>
-              <li>React</li>
-              <li>NextJs</li>
-              <li>Golang</li>
-              <li>Java</li>
-              <li>Rust</li>
-            </ul>
-          </div>
+          <Experience />
         </section>
       </main>
       <footer className="mt-8 w-full bg-gray-200 p-4">

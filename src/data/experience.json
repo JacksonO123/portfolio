@@ -1,0 +1,39 @@
+{
+  "experience": [
+    {
+      "text": "TypeScript",
+      "color": "#4272ba",
+      "image": "ts.jpg"
+    },
+    {
+      "text": "JavaScript",
+      "color": "#e0ca24",
+      "image": "js.jpg"
+    },
+    {
+      "text": "React",
+      "color": "#86d9f7",
+      "image": "react.jpg"
+    },
+    {
+      "text": "NextJs",
+      "color": "#262d31",
+      "image": "nextjs.png"
+    },
+    {
+      "text": "Golang",
+      "color": "#53acd4",
+      "image": "go.png"
+    },
+    {
+      "text": "Java",
+      "color": "#da4038",
+      "image": "java.png"
+    },
+    {
+      "text": "Rust",
+      "color": "#e55d2f",
+      "image": "rust.png"
+    }
+  ]
+}
