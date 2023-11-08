@@ -9,12 +9,12 @@ import projectData from "../data/projects.json";
 import Projects from "~/components/Projects";
 import { type UiProjectType } from "~/types/projects";
 import Experience from "~/components/Experience";
+import Section from "~/components/Section";
 
 const Home: NextPage = () => {
   const [projects, setProjects] = useState<UiProjectType[]>([]);
 
   useEffect(() => {
-    console.log("init");
     setProjects(
       projectData.projects.map(
         (p) =>
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Jackson Otto Portfolio Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="relative flex min-h-screen flex-col gap-12 bg-white p-4">
+      <main className="relative flex min-h-screen flex-col gap-16 bg-white p-4">
         <section
           className={`relative h-[350px] w-full overflow-hidden rounded-xl shadow-lg ${
             styles["header-clip-path"] || ""
@@ -63,19 +63,14 @@ const Home: NextPage = () => {
             Jackson Otto
           </h1>
         </section>
-        <section
-          className={`flex flex-col items-center ${styles["fade-in"] || ""}`}
-        >
-          <h1 className="mb-5 text-3xl font-light">Projects</h1>
+        <Section title="Projects">
           <article className={`w-full ${styles["project-grid"] || ""}`}>
             <Projects projects={projects} showDetails={showDetails} />
           </article>
-        </section>
-        <section
-          className={`flex flex-col items-center ${styles["fade-in"] || ""}`}
-        >
+        </Section>
+        <Section title="Experience">
           <Experience />
-        </section>
+        </Section>
       </main>
       <footer className="mt-8 w-full bg-gray-200 p-4">
         <Link

@@ -3,27 +3,56 @@
     {
       "text": "TypeScript",
       "color": "#4272ba",
-      "image": "ts.jpg"
+      "image": "ts.jpg",
+      "link": "https://www.typescriptlang.org/"
     },
     {
       "text": "JavaScript",
       "color": "#e0ca24",
-      "image": "js.jpg"
+      "image": "js.jpg",
+      "link": "https://www.javascript.com/"
     },
     {
       "text": "React",
       "color": "#86d9f7",
-      "image": "react.jpg"
+      "image": "react.jpg",
+      "link": "https://react.dev/"
+    },
+    {
+      "text": "Svelte",
+      "color": "#eb5028",
+      "image": "svelte.png",
+      "link": "https://svelte.dev/"
+    },
+    {
+      "text": "VueJs",
+      "color": "#64b788",
+      "image": "vue.png",
+      "link": "https://vuejs.org/"
+    },
+    {
+      "text": "SolidJs",
+      "color": "#5f86c1",
+      "image": "solid.png",
+      "link": "https://www.solidjs.com/"
+    },
+    {
+      "text": "Vite",
+      "color": "#a250f4",
+      "image": "vite.png",
+      "link": "https://vitejs.dev/"
     },
     {
       "text": "NextJs",
       "color": "#262d31",
-      "image": "nextjs.png"
+      "image": "nextjs.png",
+      "link": "https://nextjs.org/"
     },
     {
       "text": "Golang",
       "color": "#53acd4",
-      "image": "go.png"
+      "image": "go.png",
+      "link": "https://go.dev/"
     },
     {
       "text": "Java",
@@ -33,7 +62,18 @@
     {
       "text": "Rust",
       "color": "#e55d2f",
-      "image": "rust.png"
+      "image": "rust.png",
+      "link": "https://www.rust-lang.org/"
+    },
+    {
+      "text": "C",
+      "color": "#245898",
+      "image": "c.png"
+    },
+    {
+      "text": "C++",
+      "color": "#245898",
+      "image": "cpp.png"
     }
   ]
 }
