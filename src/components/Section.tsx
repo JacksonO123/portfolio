@@ -6,8 +6,6 @@ type SectionProps = {
 };
 
 const Section = ({ children, title }: SectionProps) => {
-  console.log(title);
-
   return (
     <section
       className={`flex flex-col items-center ${styles["fade-in"] || ""}`}
