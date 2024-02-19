@@ -18,6 +18,21 @@
   max-width: calc(300px * 3 + 2rem * 2);
 }
 
+.profile-picture {
+  transform: translateY(2px) scale(1.35);
+}
+
+.profile-picture-wrapper {
+  --size: 120px;
+  width: var(--size);
+  height: var(--size);
+  overflow: hidden;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border-radius: 8px;
+}
+
 @keyframes fade-in-keyframe {
   from {
     opacity: 0;

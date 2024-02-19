@@ -10,6 +10,7 @@ import Projects from "~/components/Projects";
 import { type UiProjectType } from "~/types/projects";
 import Experience from "~/components/Experience";
 import Section from "~/components/Section";
+import Image from "next/image";
 
 const Home: NextPage = () => {
   const [projects, setProjects] = useState<UiProjectType[]>([]);
@@ -62,6 +63,16 @@ const Home: NextPage = () => {
           <h1 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-60%] select-none text-center text-8xl font-light text-gray-800">
             Jackson Otto
           </h1>
+          <div className={styles["profile-picture-wrapper"]}>
+            <Image
+              className={styles["profile-picture"]}
+              src="/assets/JacksonOtto.jpg"
+              alt="Jackson Otto Picture"
+              height={120}
+              width={120}
+              priority={true}
+            />
+          </div>
         </section>
         <Section title="Projects">
           <article className={`w-full ${styles["project-grid"] || ""}`}>

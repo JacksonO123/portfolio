@@ -32,6 +32,7 @@ const Projects = ({ projects, showDetails }: ProjectsProps) => {
                   alt=""
                   width={width}
                   height={width * aspectRatio}
+                  priority={true}
                 />
               </Link>
             ) : (
