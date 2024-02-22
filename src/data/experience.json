@@ -4,17 +4,17 @@
       "text": "TypeScript",
       "color": "#4272ba",
       "image": "ts.jpg",
-      "link": "https://www.typescriptlang.org/"
+      "link": "https://typescriptlang.org/"
     },
     {
       "text": "JavaScript",
       "color": "#e0ca24",
       "image": "js.jpg",
-      "link": "https://www.javascript.com/"
+      "link": "https://javascript.com/"
     },
     {
       "text": "React",
-      "color": "#86d9f7",
+      "color": "#68b1cc",
       "image": "react.jpg",
       "link": "https://react.dev/"
     },
@@ -34,7 +34,7 @@
       "text": "SolidJs",
       "color": "#5f86c1",
       "image": "solid.png",
-      "link": "https://www.solidjs.com/"
+      "link": "https://solidjs.com/"
     },
     {
       "text": "Vite",
@@ -47,6 +47,18 @@
       "color": "#262d31",
       "image": "nextjs.png",
       "link": "https://nextjs.org/"
+    },
+    {
+      "text": "Prisma",
+      "color": "#183349",
+      "image": "prisma.png",
+      "link": "https://prisma.io/"
+    },
+    {
+      "text": "Firebase",
+      "color": "#f2ab40",
+      "image": "firebase.png",
+      "link": "https://firebase.google.com/"
     },
     {
       "text": "Golang",
@@ -63,7 +75,7 @@
       "text": "Rust",
       "color": "#e55d2f",
       "image": "rust.png",
-      "link": "https://www.rust-lang.org/"
+      "link": "https://rust-lang.org/"
     },
     {
       "text": "C",
@@ -74,6 +86,16 @@
       "text": "C++",
       "color": "#245898",
       "image": "cpp.png"
+    },
+    {
+      "text": "HTML 5",
+      "color": "#d25a36",
+      "image": "html5.png"
+    },
+    {
+      "text": "CSS",
+      "color": "#3370b2",
+      "image": "css.png"
     }
   ]
 }

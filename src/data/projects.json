@@ -29,11 +29,32 @@
       "filename": "raymarch.jpg"
     },
     {
+      "name": "Boids",
+      "description": "2d boid simulation.",
+      "tools": ["SimulationJS", "TypeScript", "Vercel"],
+      "link": "https://2d-boids-demo.vercel.app/",
+      "filename": "boids.jpg"
+    },
+    {
       "name": "Graph Animation",
-      "description": "Animating connections of a 2d graph",
+      "description": "Animating connections of a 2d graph.",
       "tools": ["TypeScript", "LampJs", "Vercel", "Vite", "SimulationJS"],
       "link": "https://graph-animation.vercel.app",
       "filename": "graph-animation.jpg"
+    },
+    {
+      "name": "Signals",
+      "description": "A generic signals library in TypeScript using the observer pattern built from scratch.",
+      "tools": ["TypeScript"],
+      "link": "https://github.com/JacksonO123/signals",
+      "filename": "signals.jpg"
+    },
+    {
+      "name": "Compression",
+      "description": "A simple lossless file compression/decompression algorithm built from scratch.",
+      "tools": ["Rust"],
+      "link": "https://github.com/JacksonO123/compression",
+      "filename": "compression.jpg"
     },
     {
       "name": "Quiq",

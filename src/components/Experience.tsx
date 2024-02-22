@@ -14,6 +14,7 @@ const Experience = () => {
               color: item.color,
               background: `${item.color}26`,
             }}
+            target="_blank"
             href={item.link}
           >
             <Image
