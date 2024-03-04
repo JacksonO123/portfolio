@@ -1,18 +1,25 @@
 {
   "projects": [
     {
-      "name": "Delaunay Triangulation",
-      "description": "Visualization of delaunay triangulation.",
-      "tools": ["SimulationJS", "TypeScript", "Vercel"],
-      "link": "https://triangulation.vercel.app/",
-      "filename": "triangulation.jpg"
+      "name": "Pulse",
+      "description": "A lightweight performance oriented web framework built with signals.",
+      "tools": ["TypeScript", "Vite"],
+      "link": "https://lampjs.vercel.app",
+      "filename": "pulse.jpg"
     },
     {
-      "name": "Spring Physics Demo",
-      "description": "Demo of spring physics with the ability to simulation soft body physics",
-      "tools": ["SimulationJS", "LampJs", "TypeScript", "Vercel", "Vite"],
-      "link": "https://springs.vercel.app/",
-      "filename": "springs.jpg"
+      "name": "LampJS",
+      "description": "A lightweight JavaScript framework, using a variation of a signals implementation.",
+      "tools": ["TypeScript", "Vite"],
+      "link": "https://lampjs.vercel.app",
+      "filename": "lampjs.jpg"
+    },
+    {
+      "name": "Wave Function Collapse",
+      "description": "Wave function collapse algorithm.",
+      "tools": ["Pulse", "TypeScript", "Vercel"],
+      "link": "https://pulsejs.vercel.app/",
+      "filename": "wf-collapse.jpg"
     },
     {
       "name": "Cross Section",
@@ -22,11 +29,11 @@
       "filename": "cross-section.jpg"
     },
     {
-      "name": "Ray Marching",
-      "description": "Visualization of a 2d ray marching algorithm.",
-      "tools": ["SimulationJS", "TypeScript", "Vercel"],
-      "link": "https://2d-ray-marching-visualization.vercel.app/",
-      "filename": "raymarch.jpg"
+      "name": "Spring Physics Demo",
+      "description": "Demo of spring physics with the ability to simulation soft body physics.",
+      "tools": ["SimulationJS", "LampJs", "TypeScript", "Vercel", "Vite"],
+      "link": "https://springs.vercel.app/",
+      "filename": "springs.jpg"
     },
     {
       "name": "Boids",
@@ -41,13 +48,6 @@
       "tools": ["TypeScript", "LampJs", "Vercel", "Vite", "SimulationJS"],
       "link": "https://graph-animation.vercel.app",
       "filename": "graph-animation.jpg"
-    },
-    {
-      "name": "Signals",
-      "description": "A generic signals library in TypeScript using the observer pattern built from scratch.",
-      "tools": ["TypeScript"],
-      "link": "https://github.com/JacksonO123/signals",
-      "filename": "signals.jpg"
     },
     {
       "name": "Compression",
@@ -71,18 +71,32 @@
       "filename": "blisp.jpg"
     },
     {
+      "name": "Ray Marching",
+      "description": "Visualization of a 2d ray marching algorithm.",
+      "tools": ["SimulationJS", "TypeScript", "Vercel"],
+      "link": "https://2d-ray-marching-visualization.vercel.app/",
+      "filename": "raymarch.jpg"
+    },
+    {
+      "name": "Delaunay Triangulation",
+      "description": "Visualization of delaunay triangulation.",
+      "tools": ["SimulationJS", "TypeScript", "Vercel"],
+      "link": "https://triangulation.vercel.app/",
+      "filename": "triangulation.jpg"
+    },
+    {
+      "name": "Signals",
+      "description": "A generic signals library in TypeScript using the observer pattern built from scratch.",
+      "tools": ["TypeScript"],
+      "link": "https://github.com/JacksonO123/signals",
+      "filename": "signals.jpg"
+    },
+    {
       "name": "SimulationJS",
       "description": "A canvas based graphics library built from scratch that can render 2d and 3d objects.",
       "tools": ["TypeScript"],
       "link": "https://github.com/Simulation-JS/Simulation-JS",
       "filename": "simulationjs.jpg"
-    },
-    {
-      "name": "LampJS",
-      "description": "A lightweight JavaScript framework, using a variation of a signals implementation.",
-      "tools": ["TypeScript", "Vite"],
-      "link": "https://lampjs.vercel.app",
-      "filename": "lampjs.jpg"
     },
     {
       "name": "3d TicTacToe",
