@@ -4,7 +4,7 @@
       "name": "Pulse",
       "description": "A lightweight performance oriented web framework built with signals.",
       "tools": ["TypeScript", "Vite"],
-      "link": "https://lampjs.vercel.app",
+      "link": "https://www.pulse.dev",
       "filename": "pulse.jpg"
     },
     {
@@ -18,7 +18,7 @@
       "name": "Wave Function Collapse",
       "description": "Wave function collapse algorithm.",
       "tools": ["Pulse", "TypeScript", "Vercel"],
-      "link": "https://pulsejs.vercel.app/",
+      "link": "https://wf-collapse.vercel.app/",
       "filename": "wf-collapse.jpg"
     },
     {
