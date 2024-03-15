@@ -85,6 +85,13 @@
       "filename": "triangulation.jpg"
     },
     {
+      "name": "DFS Maze Generation",
+      "description": "Visualization of DFS maze generation",
+      "tools": ["SimulationJSv2", "TypeScript", "Vercel", "Pulse"],
+      "link": "https://dfs-maze.vercel.app/",
+      "filename": "maze-dfs.jpg"
+    },
+    {
       "name": "Signals",
       "description": "A generic signals library in TypeScript using the observer pattern built from scratch.",
       "tools": ["TypeScript"],
