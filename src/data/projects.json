@@ -4,7 +4,7 @@
       "name": "Pulse",
       "description": "A lightweight performance oriented web framework built with signals.",
       "tools": ["TypeScript", "Vite"],
-      "link": "https://www.pulse.dev",
+      "link": "https://www.pulsejs.dev/",
       "filename": "pulse.jpg"
     },
     {
