@@ -71,6 +71,13 @@
       "filename": "blisp.jpg"
     },
     {
+      "name": "Voronoi Diagram",
+      "description": "Visualization of a 2d voronoi diagram",
+      "tools": ["SimulationJS", "TypeScript", "Vercel", "Vite"],
+      "link": "https://voronoidiagram.vercel.app/",
+      "filename": "voronoi.jpg"
+    },
+    {
       "name": "Ray Marching",
       "description": "Visualization of a 2d ray marching algorithm.",
       "tools": ["SimulationJS", "TypeScript", "Vercel"],
