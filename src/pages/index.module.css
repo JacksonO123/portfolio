@@ -30,7 +30,7 @@
   position: absolute;
   top: 8px;
   left: 8px;
-  border-radius: 8px;
+  border-radius: 18px;
 }
 
 @keyframes fade-in-keyframe {

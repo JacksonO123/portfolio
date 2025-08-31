@@ -11,6 +11,8 @@ import { type UiProjectType } from "~/types/projects";
 import Experience from "~/components/Experience";
 import Section from "~/components/Section";
 import Image from "next/image";
+import linkedinImage from "../../public/assets/linkedin-image.png";
+import ghImage from "../../public/assets/gh-image.jpg";
 
 const Home: NextPage = () => {
   const [projects, setProjects] = useState<UiProjectType[]>([]);
@@ -72,6 +74,40 @@ const Home: NextPage = () => {
               width={120}
               priority={true}
             />
+            <div className="absolute bottom-0 flex gap-1 p-1">
+              <a
+                href="https://github.com/JacksonO123"
+                className="rounded-full"
+                target="_blank"
+              >
+                <div className="rounded-full bg-white p-1">
+                  <div className="overflow-hidden rounded-full bg-white">
+                    <Image
+                      alt={`Linkedin link`}
+                      src={ghImage}
+                      width={25}
+                      height={25}
+                    />
+                  </div>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jackson-otto-07b1b1262"
+                className="rounded-full"
+                target="_blank"
+              >
+                <div className="rounded-full bg-white p-1">
+                  <div className="overflow-hidden rounded-full bg-white">
+                    <Image
+                      alt={`Linkedin link`}
+                      src={linkedinImage}
+                      width={25}
+                      height={25}
+                    />
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         </section>
         <Section title="Projects">
