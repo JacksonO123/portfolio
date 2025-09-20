@@ -13,6 +13,7 @@ import Section from "~/components/Section";
 import Image from "next/image";
 import linkedinImage from "../../public/assets/linkedin-image.png";
 import ghImage from "../../public/assets/gh-image.jpg";
+import MiscSkills from "~/components/MiscSkills";
 
 const Home: NextPage = () => {
   const [projects, setProjects] = useState<UiProjectType[]>([]);
@@ -57,7 +58,7 @@ const Home: NextPage = () => {
       </Head>
       <main className="relative flex min-h-screen flex-col gap-16 bg-white p-4">
         <section
-          className={`relative h-[350px] w-full overflow-hidden rounded-xl shadow-lg ${
+          className={`relative h-[350px] w-full overflow-hidden rounded-2xl shadow-lg ${
             styles["header-clip-path"] || ""
           }`}
         >
@@ -65,44 +66,60 @@ const Home: NextPage = () => {
           <h1 className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-60%] select-none text-center text-8xl font-light text-gray-800">
             Jackson Otto
           </h1>
-          <div className={styles["profile-picture-wrapper"]}>
+          <div
+            className="absolute overflow-hidden rounded-2xl"
+            style={{
+              width: "120px",
+              height: "120px",
+              top: "8px",
+              left: "8px",
+            }}
+          >
             <Image
-              className={styles["profile-picture"]}
+              className="translate-y-[2px] scale-[1.35]"
               src="/assets/JacksonOtto.jpg"
               alt="Jackson Otto Picture"
-              height={120}
-              width={120}
+              height={162}
+              width={162}
               priority={true}
             />
             <div className="absolute bottom-0 flex gap-1 p-1">
               <a
                 href="https://github.com/JacksonO123"
-                className="rounded-full"
+                className="aspect-square rounded-full"
                 target="_blank"
               >
-                <div className="rounded-full bg-white p-1">
+                <div className="rounded-full bg-white p-0.5 duration-150 hover:scale-110">
                   <div className="overflow-hidden rounded-full bg-white">
                     <Image
-                      alt={`Linkedin link`}
+                      alt={`Github link`}
                       src={ghImage}
                       width={25}
                       height={25}
+                      style={{
+                        width: "25px",
+                        height: "25px",
+                      }}
                     />
                   </div>
                 </div>
               </a>
               <a
                 href="https://www.linkedin.com/in/jackson-otto-07b1b1262"
-                className="rounded-full"
+                className="aspect-square rounded-full"
                 target="_blank"
               >
-                <div className="rounded-full bg-white p-1">
+                <div className="rounded-full bg-white p-0.5 duration-150 hover:scale-110">
                   <div className="overflow-hidden rounded-full bg-white">
                     <Image
                       alt={`Linkedin link`}
                       src={linkedinImage}
                       width={25}
                       height={25}
+                      style={{
+                        width: "25px",
+                        height: "25px",
+                      }}
                     />
                   </div>
                 </div>
@@ -111,12 +128,15 @@ const Home: NextPage = () => {
           </div>
         </section>
         <Section title="Projects">
-          <article className={`w-full ${styles["project-grid"] || ""}`}>
+          <article className="flex flex-wrap gap-10">
             <Projects projects={projects} showDetails={showDetails} />
           </article>
         </Section>
-        <Section title="Experience">
+        <Section title="Languages">
           <Experience />
+        </Section>
+        <Section title="Misc Skills">
+          <MiscSkills />
         </Section>
       </main>
       <footer className="mt-8 w-full bg-gray-200 p-4">

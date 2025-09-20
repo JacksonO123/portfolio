@@ -1,0 +1,34 @@
+{
+  "frameworks": [
+    {
+      "text": "React",
+      "color": "#68b1cc",
+      "image": "react.jpg",
+      "link": "https://react.dev/"
+    },
+    {
+      "text": "Svelte",
+      "color": "#eb5028",
+      "image": "svelte.png",
+      "link": "https://svelte.dev/"
+    },
+    {
+      "text": "VueJs",
+      "color": "#64b788",
+      "image": "vue.png",
+      "link": "https://vuejs.org/"
+    },
+    {
+      "text": "SolidJs",
+      "color": "#5f86c1",
+      "image": "solid.png",
+      "link": "https://solidjs.com/"
+    },
+    {
+      "text": "NextJs",
+      "color": "#262d31",
+      "image": "nextjs.png",
+      "link": "https://nextjs.org/"
+    }
+  ]
+}

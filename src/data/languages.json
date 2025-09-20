@@ -1,0 +1,54 @@
+{
+  "experience": [
+    {
+      "text": "Zig",
+      "color": "#f7a41d",
+      "image": "zig.png"
+    },
+    {
+      "text": "Rust",
+      "color": "#e55d2f",
+      "image": "rust.png"
+    },
+    {
+      "text": "C",
+      "color": "#245898",
+      "image": "c.png"
+    },
+    {
+      "text": "C++",
+      "color": "#245898",
+      "image": "cpp.png"
+    },
+    {
+      "text": "Golang",
+      "color": "#53acd4",
+      "image": "go.png"
+    },
+    {
+      "text": "TypeScript",
+      "color": "#4272ba",
+      "image": "ts.jpg"
+    },
+    {
+      "text": "JavaScript",
+      "color": "#e0ca24",
+      "image": "js.jpg"
+    },
+    {
+      "text": "Java",
+      "color": "#da4038",
+      "image": "java.png"
+    },
+    {
+      "text": "HTML 5",
+      "color": "#d25a36",
+      "image": "html5.png"
+    },
+    {
+      "text": "CSS",
+      "color": "#3370b2",
+      "image": "css.png"
+    }
+  ]
+}

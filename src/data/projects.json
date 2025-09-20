@@ -1,71 +1,85 @@
 {
   "projects": [
     {
+      "name": "Blitz",
+      "description": "A fully featured compiled programming language and interpreter built from scratch",
+      "tools": ["Zig", "Compilers", "Virtual Machines"],
+      "link": "https://github.com/JacksonO123/blitz",
+      "filename": "blitz.png"
+    },
+    {
+      "name": "SimulationJSv2",
+      "description": "A gpu accelerated graphics library with WebGPU backend",
+      "tools": ["TypeScript", "WebGPU"],
+      "link": "https://github.com/JacksonO123/simulationjs-v2",
+      "filename": "simjsv2.png"
+    },
+    {
+      "name": "Graph Animation",
+      "description": "Animating connections of a 2d graph",
+      "tools": ["TypeScript", "LampJs", "Vercel", "Vite", "SimulationJS"],
+      "link": "https://graph-animation.vercel.app",
+      "filename": "graph-animation.jpg"
+    },
+    {
       "name": "Pulse",
-      "description": "A lightweight performance oriented web framework built with signals.",
+      "description": "A lightweight performance oriented web framework built with signals",
       "tools": ["TypeScript", "Vite"],
       "link": "https://www.pulsejs.dev/",
       "filename": "pulse.jpg"
     },
     {
       "name": "LampJS",
-      "description": "A lightweight JavaScript framework, using a variation of a signals implementation.",
+      "description": "A lightweight JavaScript framework, using a variation of a signals implementation",
       "tools": ["TypeScript", "Vite"],
       "link": "https://lampjs.vercel.app",
       "filename": "lampjs.jpg"
     },
     {
       "name": "Wave Function Collapse",
-      "description": "Wave function collapse algorithm.",
+      "description": "Wave function collapse algorithm",
       "tools": ["Pulse", "TypeScript", "Vercel"],
       "link": "https://wf-collapse.vercel.app/",
       "filename": "wf-collapse.jpg"
     },
     {
       "name": "Cross Section",
-      "description": "3d graphing calculator for visualizing cross section of two functions. Visualizes the rotation of the cross section around an axis of rotation.",
+      "description": "3d graphing calculator for visualizing cross section of two functions. Visualizes the rotation of the cross section around an axis of rotation",
       "tools": ["SolidJS", "TypeScript", "SimulationJS", "Vercel"],
       "link": "https://cross-section.vercel.app/",
       "filename": "cross-section.jpg"
     },
     {
       "name": "Spring Physics Demo",
-      "description": "Demo of spring physics with the ability to simulation soft body physics.",
+      "description": "Demo of spring physics with the ability to simulation soft body physics",
       "tools": ["SimulationJS", "LampJs", "TypeScript", "Vercel", "Vite"],
       "link": "https://springs.vercel.app/",
       "filename": "springs.jpg"
     },
     {
       "name": "Boids",
-      "description": "2d boid simulation.",
+      "description": "2d boid simulation",
       "tools": ["SimulationJS", "TypeScript", "Vercel"],
       "link": "https://2d-boids-demo.vercel.app/",
       "filename": "boids.jpg"
     },
     {
-      "name": "Graph Animation",
-      "description": "Animating connections of a 2d graph.",
-      "tools": ["TypeScript", "LampJs", "Vercel", "Vite", "SimulationJS"],
-      "link": "https://graph-animation.vercel.app",
-      "filename": "graph-animation.jpg"
-    },
-    {
       "name": "Compression",
-      "description": "A simple lossless file compression/decompression algorithm built from scratch.",
+      "description": "A simple lossless file compression/decompression algorithm built from scratch",
       "tools": ["Rust"],
       "link": "https://github.com/JacksonO123/compression",
       "filename": "compression.jpg"
     },
     {
       "name": "Quiq",
-      "description": "A programming language built from scratch in rust.",
+      "description": "A programming language built from scratch in rust",
       "tools": ["Rust"],
       "link": "https://github.com/JacksonO123/quiq",
       "filename": "quiq.jpg"
     },
     {
       "name": "Blisp",
-      "description": "A lisp inspired programming language built from scratch.",
+      "description": "A lisp inspired programming language built from scratch",
       "tools": ["Golang"],
       "link": "https://github.com/JacksonO123/blisp",
       "filename": "blisp.jpg"
@@ -78,20 +92,6 @@
       "filename": "voronoi.jpg"
     },
     {
-      "name": "Ray Marching",
-      "description": "Visualization of a 2d ray marching algorithm.",
-      "tools": ["SimulationJS", "TypeScript", "Vercel"],
-      "link": "https://2d-ray-marching-visualization.vercel.app/",
-      "filename": "raymarch.jpg"
-    },
-    {
-      "name": "Delaunay Triangulation",
-      "description": "Visualization of delaunay triangulation.",
-      "tools": ["SimulationJS", "TypeScript", "Vercel"],
-      "link": "https://triangulation.vercel.app/",
-      "filename": "triangulation.jpg"
-    },
-    {
       "name": "DFS Maze Generation",
       "description": "Visualization of DFS maze generation",
       "tools": ["SimulationJSv2", "TypeScript", "Vercel", "Pulse"],
@@ -99,29 +99,43 @@
       "filename": "maze-dfs.jpg"
     },
     {
+      "name": "Ray Marching",
+      "description": "Visualization of a 2d ray marching algorithm",
+      "tools": ["SimulationJS", "TypeScript", "Vercel"],
+      "link": "https://2d-ray-marching-visualization.vercel.app/",
+      "filename": "raymarch.jpg"
+    },
+    {
+      "name": "Delaunay Triangulation",
+      "description": "Visualization of delaunay triangulation",
+      "tools": ["SimulationJS", "TypeScript", "Vercel"],
+      "link": "https://triangulation.vercel.app/",
+      "filename": "triangulation.jpg"
+    },
+    {
       "name": "Signals",
-      "description": "A generic signals library in TypeScript using the observer pattern built from scratch.",
+      "description": "A generic signals library in TypeScript using the observer pattern built from scratch",
       "tools": ["TypeScript"],
       "link": "https://github.com/JacksonO123/signals",
       "filename": "signals.jpg"
     },
     {
       "name": "SimulationJS",
-      "description": "A canvas based graphics library built from scratch that can render 2d and 3d objects.",
+      "description": "A canvas based graphics library built from scratch that can render 2d and 3d objects",
       "tools": ["TypeScript"],
       "link": "https://github.com/Simulation-JS/Simulation-JS",
       "filename": "simulationjs.jpg"
     },
     {
       "name": "3d TicTacToe",
-      "description": "TicTacToe in 3d using web components.",
+      "description": "TicTacToe in 3d using web components",
       "tools": ["TypeScript", "Vite", "Netlify", "NodeJS"],
       "link": "https://the3dtictactoe.netlify.app/",
       "filename": "tictactoe.jpg"
     },
     {
       "name": "MVHS CS Club Website",
-      "description": "Website for the computer science club at MVHS.",
+      "description": "Website for the computer science club at MVHS",
       "tools": ["TypeScript", "React", "Netlify", "NodeJs"],
       "link": "https://mvhs-cs-club.netlify.app/",
       "filename": "mvcs.jpg"

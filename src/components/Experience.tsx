@@ -1,21 +1,19 @@
-import experience from "../data/experience.json";
+import experience from "../data/languages.json";
 import Image from "next/image";
 
 const Experience = () => {
   return (
-    <div className="flex w-full flex-col items-center">
-      <section className="flex max-w-[800px] flex-row flex-wrap justify-center gap-4">
+    <div className="flex w-full flex-col">
+      <div className="flex flex-wrap gap-4">
         {experience.experience.map((item, index) => (
-          <a
+          <div
             key={`experience-${index}`}
-            className="flex w-fit cursor-pointer flex-row overflow-hidden rounded-md border-[1px] p-2 duration-150 hover:scale-105 active:scale-100"
+            className="flex w-fit flex-row overflow-hidden rounded-md border-[1px] p-2"
             style={{
               borderColor: item.color,
               color: item.color,
               background: `${item.color}26`,
             }}
-            target="_blank"
-            href={item.link}
           >
             <Image
               src={`/assets/${item.image}`}
@@ -31,9 +29,9 @@ const Experience = () => {
             <div className="flex select-none items-center pl-5 pr-5">
               {item.text}
             </div>
-          </a>
+          </div>
         ))}
-      </section>
+      </div>
     </div>
   );
 };

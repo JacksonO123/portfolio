@@ -10,8 +10,10 @@ const Section = ({ children, title }: SectionProps) => {
     <section
       className={`flex flex-col items-center ${styles["fade-in"] || ""}`}
     >
-      <h1 className="mb-10 text-5xl font-light">{title}</h1>
-      {children}
+      <div className="w-full max-w-[1000px]">
+        <h1 className="mb-4 text-5xl font-light">{title}</h1>
+        {children}
+      </div>
     </section>
   );
 };
