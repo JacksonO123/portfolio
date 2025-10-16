@@ -127,7 +127,10 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <Section title="Projects">
+        <Section
+          title="Projects"
+          description={`The "bigger" or more interesting of my projects. I have many more that are not listed here that can be found on my GitHub.`}
+        >
           <article className="flex flex-wrap gap-10">
             <Projects projects={projects} showDetails={showDetails} />
           </article>
