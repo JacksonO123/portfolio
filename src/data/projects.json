@@ -8,6 +8,13 @@
       "filename": "blitz.png"
     },
     {
+      "name": "Real Time Traffic Simulation",
+      "description": "A real time traffic simulation built from scratch using my PulsJS framework and my SimulationJSv2 graphics library",
+      "tools": ["TypeScript", "WebGPU"],
+      "link": "https://github.com/JacksonO123/traffic-simulation",
+      "filename": "traffic.jpg"
+    },
+    {
       "name": "SimulationJSv2",
       "description": "A gpu accelerated graphics library with WebGPU backend",
       "tools": ["TypeScript", "WebGPU"],
