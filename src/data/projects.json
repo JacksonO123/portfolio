@@ -1,8 +1,8 @@
 {
   "projects": [
     {
-      "name": "Blitz",
-      "description": "A fully featured compiled programming language and interpreter built from scratch",
+      "name": "Blitz Programming Language",
+      "description": "A fully featured programming language compiler and virtual machine built from scratch",
       "tools": ["Zig", "Compilers", "Virtual Machines"],
       "link": "https://github.com/JacksonO123/blitz",
       "filename": "blitz.png"
@@ -29,14 +29,14 @@
       "filename": "graph-animation.jpg"
     },
     {
-      "name": "Pulse",
+      "name": "PulseJS Web Framework",
       "description": "A lightweight performance oriented web framework built with signals",
       "tools": ["TypeScript", "Vite"],
       "link": "https://www.pulsejs.dev/",
       "filename": "pulse.jpg"
     },
     {
-      "name": "LampJS",
+      "name": "LampJS Web Framework",
       "description": "A lightweight JavaScript framework, using a variation of a signals implementation",
       "tools": ["TypeScript", "Vite"],
       "link": "https://lampjs.vercel.app",
@@ -50,7 +50,7 @@
       "filename": "wf-collapse.jpg"
     },
     {
-      "name": "Cross Section",
+      "name": "Interactive 3D Cross Section Graph",
       "description": "3d graphing calculator for visualizing cross section of two functions. Visualizes the rotation of the cross section around an axis of rotation",
       "tools": ["SolidJS", "TypeScript", "SimulationJS", "Vercel"],
       "link": "https://cross-section.vercel.app/",
@@ -64,28 +64,28 @@
       "filename": "springs.jpg"
     },
     {
-      "name": "Boids",
+      "name": "Boid Simulation",
       "description": "2d boid simulation",
       "tools": ["SimulationJS", "TypeScript", "Vercel"],
       "link": "https://2d-boids-demo.vercel.app/",
       "filename": "boids.jpg"
     },
     {
-      "name": "Compression",
+      "name": "A Compression Algorithm",
       "description": "A simple lossless file compression/decompression algorithm built from scratch",
       "tools": ["Rust"],
       "link": "https://github.com/JacksonO123/compression",
       "filename": "compression.jpg"
     },
     {
-      "name": "Quiq",
+      "name": "Quiq Programming Language",
       "description": "A programming language built from scratch in rust",
       "tools": ["Rust"],
       "link": "https://github.com/JacksonO123/quiq",
       "filename": "quiq.jpg"
     },
     {
-      "name": "Blisp",
+      "name": "Blisp Programming Language",
       "description": "A lisp inspired programming language built from scratch",
       "tools": ["Golang"],
       "link": "https://github.com/JacksonO123/blisp",

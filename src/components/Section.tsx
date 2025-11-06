@@ -11,7 +11,7 @@ const Section = ({ children, title, description }: SectionProps) => {
     <section
       className={`flex flex-col items-center ${styles["fade-in"] || ""}`}
     >
-      <div className="w-full max-w-[1000px]">
+      <div className="w-full max-w-[1130px]">
         <div className="mb-4 space-y-2">
           <h1 className="text-5xl font-light">{title}</h1>
           {description && <div>{description}</div>}

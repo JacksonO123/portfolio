@@ -12,7 +12,7 @@ type ProjectsProps = {
 
 const Projects = ({ projects, showDetails }: ProjectsProps) => {
   const aspectRatio = 6 / 10;
-  const width = 300;
+  const width = 350;
 
   return (
     <>
@@ -20,7 +20,7 @@ const Projects = ({ projects, showDetails }: ProjectsProps) => {
         // all images are the same size
         <div
           key={`proj-${index}`}
-          className="flex h-fit w-[286px] flex-col overflow-hidden rounded-md shadow-md duration-200 ease-in-out hover:translate-y-[-4px] hover:scale-105"
+          className="flex h-fit w-[350px] flex-col overflow-hidden rounded-md shadow-md duration-200 ease-in-out hover:translate-y-[-4px] hover:scale-105"
         >
           {p.link !== undefined ? (
             <Link href={p.link} className="relative" target="_blank">
@@ -47,7 +47,7 @@ const Projects = ({ projects, showDetails }: ProjectsProps) => {
               height={186}
             />
           )}
-          <div className="flex justify-between p-3">
+          <div className="flex justify-between gap-2 p-3">
             <h3>{p.name}</h3>
             <button
               className="underline"

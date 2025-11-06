@@ -1,14 +1,9 @@
 {
   "experience": [
     {
-      "text": "Zig",
-      "color": "#f7a41d",
-      "image": "zig.png"
-    },
-    {
-      "text": "Rust",
-      "color": "#e55d2f",
-      "image": "rust.png"
+      "text": "C++",
+      "color": "#245898",
+      "image": "cpp.png"
     },
     {
       "text": "C",
@@ -16,14 +11,24 @@
       "image": "c.png"
     },
     {
-      "text": "C++",
-      "color": "#245898",
-      "image": "cpp.png"
+      "text": "Java",
+      "color": "#da4038",
+      "image": "java.png"
     },
     {
       "text": "Golang",
       "color": "#53acd4",
       "image": "go.png"
+    },
+    {
+      "text": "Rust",
+      "color": "#e55d2f",
+      "image": "rust.png"
+    },
+    {
+      "text": "Zig",
+      "color": "#f7a41d",
+      "image": "zig.png"
     },
     {
       "text": "TypeScript",
@@ -36,9 +41,9 @@
       "image": "js.jpg"
     },
     {
-      "text": "Java",
-      "color": "#da4038",
-      "image": "java.png"
+      "text": "Python",
+      "color": "#e7a60d",
+      "image": "python.png"
     },
     {
       "text": "HTML 5",
