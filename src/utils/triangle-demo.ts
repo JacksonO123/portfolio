@@ -20,6 +20,13 @@ export const createTriangleDemo = (canvas: Simulation) => {
   canvas.setBgColor(new Color(255, 255, 255));
   canvas.fitElement();
 
+  const corners = [
+    new Vector(0, 0),
+    new Vector(0, 0),
+    new Vector(0, 0),
+    new Vector(0, 0),
+  ];
+
   const triangles = new SceneCollection("triangles");
   canvas.add(triangles);
 
@@ -87,7 +94,7 @@ export const createTriangleDemo = (canvas: Simulation) => {
     }
   }
 
-  const numCircles = 200;
+  const numCircles = 150;
   const points = generatePoints(numCircles);
   const dots = generateCircles(points);
 
@@ -99,50 +106,58 @@ export const createTriangleDemo = (canvas: Simulation) => {
     return 1 - Math.pow(1 - x, 4);
   }
 
-  (() => {
-    const diff = new Color(
-      fromColorEnd.r - fromColor.r,
-      fromColorEnd.g - fromColor.g,
-      fromColorEnd.b - fromColor.b
-    );
-    void transitionValues(
-      // eslint-disable-next-line @typescript-eslint/no-empty-function
-      () => {},
-      (p) => {
-        fromColor.r += diff.r * p;
-        fromColor.g += diff.g * p;
-        fromColor.b += diff.b * p;
-        return true;
-      },
-      () => {
-        fromColor.r = fromColorEnd.r;
-        fromColor.g = fromColorEnd.g;
-        fromColor.b = fromColorEnd.b;
-      },
-      0.8,
-      easeOutQuart
-    );
-  })();
+  const diff = new Color(
+    fromColorEnd.r - fromColor.r,
+    fromColorEnd.g - fromColor.g,
+    fromColorEnd.b - fromColor.b
+  );
+  void transitionValues(
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    () => {},
+    (p) => {
+      fromColor.r += diff.r * p;
+      fromColor.g += diff.g * p;
+      fromColor.b += diff.b * p;
+      return true;
+    },
+    () => {
+      fromColor.r = fromColorEnd.r;
+      fromColor.g = fromColorEnd.g;
+      fromColor.b = fromColorEnd.b;
+    },
+    0.8,
+    easeOutQuart
+  );
 
   let startPos: Vector | null = null;
   let pos: Vector | null = null;
   canvas.on("mousedown", (e: MouseEvent) => {
-    pos = new Vector(e.offsetX, e.offsetY).multiply(canvas.ratio);
+    pos = pos ?? new Vector(0, 0);
+    pos.x = e.offsetX;
+    pos.y = e.offsetY;
+    pos.multiply(canvas.ratio);
     startPos = pos.clone();
   });
   canvas.on("mouseup", (e: MouseEvent) => {
     if (pos !== null && startPos !== null) {
       const diff = pos.clone().sub(startPos);
       if (diff.getMag() === 0) {
-        addNewPoint(new Vector(e.offsetX, e.offsetY).multiply(canvas.ratio));
+        // reuse pos
+        pos.x = e.offsetX;
+        pos.y = e.offsetY;
+        pos.multiply(canvas.ratio);
+        addNewPoint(pos);
       }
     }
     startPos = null;
     pos = null;
   });
+
   canvas.on("mousemove", (e: MouseEvent) => {
     if (pos) {
-      pos = new Vector(e.offsetX, e.offsetY).multiply(canvas.ratio);
+      pos.x = e.offsetX;
+      pos.y = e.offsetY;
+      pos.multiply(canvas.ratio);
     }
   });
 
@@ -166,17 +181,20 @@ export const createTriangleDemo = (canvas: Simulation) => {
   function drawTriangles(circles: Node[]) {
     triangles.empty();
 
-    const corners = [
-      new Vector(-outerBuffer, -outerBuffer),
-      new Vector(-outerBuffer, canvas.height * canvas.ratio + outerBuffer),
-      new Vector(canvas.width * canvas.ratio + outerBuffer, -outerBuffer),
-      new Vector(
-        canvas.width * canvas.ratio + outerBuffer,
-        canvas.height * canvas.ratio + outerBuffer
-      ),
-    ];
-    const dots = [...generateCircles(corners), ...circles];
-    const posArr = getPosArr(dots);
+    corners[0]!.x = -outerBuffer;
+    corners[0]!.y = -outerBuffer;
+
+    corners[1]!.x = -outerBuffer;
+    corners[1]!.y = canvas.height * canvas.ratio + outerBuffer;
+
+    corners[2]!.x = canvas.width * canvas.ratio + outerBuffer;
+    corners[2]!.y = -outerBuffer;
+
+    corners[3]!.x = canvas.width * canvas.ratio + outerBuffer;
+    corners[3]!.y = canvas.height * canvas.ratio + outerBuffer;
+
+    const dots = generateCircles(corners).concat(circles);
+    const posArr = dots.map((p) => [p.pos.x, p.pos.y]);
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     const triangulated = triangulate(posArr) as [number, number, number][];
     triangulated.forEach((triangle) => {
@@ -212,10 +230,6 @@ export const createTriangleDemo = (canvas: Simulation) => {
       );
       triangles.add(poly);
     });
-  }
-
-  function getPosArr(points: Node[]) {
-    return points.map((p) => [p.pos.x, p.pos.y]);
   }
 
   function movePoints(points: Node[], mousePos: Vector | null, dt: number) {
