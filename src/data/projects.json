@@ -22,6 +22,20 @@
       "filename": "simjsv2.png"
     },
     {
+      "name": "Logic51",
+      "description": "Truth table generating website",
+      "tools": ["SolidJS", "TypeScript", "Vite", "Vercel"],
+      "link": "https://logic51.vercel.app",
+      "filename": "logic51.jpg"
+    },
+    {
+      "name": "Double Speed",
+      "description": "Double speed card game",
+      "tools": ["SolidJS", "TypeScript", "Vite", "Vercel"],
+      "link": "https://speed-cards.vercel.app",
+      "filename": "speed-cards.jpg"
+    },
+    {
       "name": "Graph Animation",
       "description": "Animating connections of a 2d graph",
       "tools": ["TypeScript", "LampJs", "Vercel", "Vite", "SimulationJS"],
