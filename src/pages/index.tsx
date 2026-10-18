@@ -14,6 +14,7 @@ import Image from "next/image";
 import linkedinImage from "../../public/assets/linkedin-image.png";
 import ghImage from "../../public/assets/gh-image.jpg";
 import MiscSkills from "~/components/MiscSkills";
+import Script from "next/script";
 
 const Home: NextPage = () => {
   const [projects, setProjects] = useState<UiProjectType[]>([]);
@@ -56,6 +57,22 @@ const Home: NextPage = () => {
         <meta name="description" content="Jackson Otto Portfolio Website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-FF8PJCRNZB"
+        strategy="afterInteractive"
+      ></Script>
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-FF8PJCRNZB');
+          `}
+      </Script>
+
       <main className="relative flex min-h-screen flex-col gap-16 bg-white p-4">
         <section
           className={`relative h-[350px] w-full overflow-hidden rounded-2xl shadow-lg ${
